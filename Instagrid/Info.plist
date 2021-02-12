@@ -62,5 +62,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+		<string>Delm-Medium.otf</string>
+		<string>ThirstySoftRegular.otf</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need to access your photo library</string>
 </dict>
 </plist>
