@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Instagrid
 //
-//  Created by Dev on 09/02/2021.
+//  Created by ANTHONY TUFFERY on 09/02/2021.
 //
 
 import UIKit
