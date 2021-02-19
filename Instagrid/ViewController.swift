@@ -49,9 +49,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             layouts[0].setImage(UIImage(named: "Selected"), for: .normal)
             layouts[1].setImage(UIImage(named: "Layout 2"), for: .normal)
             layouts[2].setImage(UIImage(named: "Layout 3"), for: .normal)
-            layouts[0].isHidden = false
-            layouts[1].isHidden = false
-            layouts[2].isHidden = false
             gridButtons[0].isHidden = false
             gridButtons[1].isHidden = true
             gridButtons[2].isHidden = false
