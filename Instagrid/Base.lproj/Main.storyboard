@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -21,25 +21,25 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-7A-yxO">
-                                <rect key="frame" x="96" y="64" width="236" height="39"/>
+                                <rect key="frame" x="96" y="20" width="183" height="39"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-Wy-wfU" userLabel="Swipe View">
-                                <rect key="frame" x="114" y="258.66666666666669" width="200" height="46.333333333333314"/>
+                                <rect key="frame" x="87.5" y="129" width="200" height="46.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="HDz-8s-RQL">
-                                        <rect key="frame" x="93.333333333333343" y="0.0" width="13.333333333333329" height="9.6666666666666661"/>
+                                        <rect key="frame" x="93.5" y="0.0" width="13.5" height="9.5"/>
                                         <variation key="heightClass=compact-widthClass=compact" image="imageView:HDz-8s-RQL:image"/>
                                         <variation key="heightClass=compact-widthClass=regular" image="imageView:HDz-8s-RQL:image"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxF-od-2CE">
-                                        <rect key="frame" x="5" y="17.666666666666629" width="190" height="28.666666666666671"/>
+                                        <rect key="frame" x="5" y="17.5" width="190" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="jhj-34-6s3"/>
                                         </constraints>
@@ -82,25 +82,25 @@
                                 </variation>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-cG-J7M" userLabel="Grid">
-                                <rect key="frame" x="64" y="313" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-R1-TfL" userLabel="Top">
                                         <rect key="frame" x="15" y="16" width="270" height="127"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz9-zI-4hH" userLabel="Top Left Button">
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz9-zI-4hH" userLabel="Top Left Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="127"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="Plus"/>
                                                 <connections>
-                                                    <action selector="pushTopLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZN-zg-vgi"/>
+                                                    <action selector="pushPhotoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8im-BT-28b"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-3v-2fH" userLabel="Top Right Button">
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-3v-2fH" userLabel="Top Right Button">
                                                 <rect key="frame" x="142" y="0.0" width="128" height="127"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="Plus"/>
                                                 <connections>
-                                                    <action selector="pushTopRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTq-fx-7mG"/>
+                                                    <action selector="pushPhotoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgK-G0-dVP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -111,20 +111,20 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-bD-WZT" userLabel="Bottom">
                                         <rect key="frame" x="15" y="157" width="269" height="127"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWh-mP-zMD" userLabel="Bottom Left Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="127"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWh-mP-zMD" userLabel="Bottom Left Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="Plus"/>
                                                 <connections>
-                                                    <action selector="pushBottomLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2vc-ap-2zE"/>
+                                                    <action selector="pushPhotoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgn-Nc-5qq"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg4-m9-ghU" userLabel="Bottom Right Button">
-                                                <rect key="frame" x="141.66666666666666" y="0.0" width="127.33333333333334" height="127"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg4-m9-ghU" userLabel="Bottom Right Button">
+                                                <rect key="frame" x="141.5" y="0.0" width="127.5" height="127"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="Plus"/>
                                                 <connections>
-                                                    <action selector="pushBottomRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Nb-cC-8ej"/>
+                                                    <action selector="pushPhotoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3x-uN-s0y"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -146,27 +146,27 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="ARa-by-wcT" userLabel="Layouts">
-                                <rect key="frame" x="63" y="792" width="302" height="80"/>
+                                <rect key="frame" x="36.5" y="567" width="302" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVb-AP-F1d" userLabel="Layout 1">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVb-AP-F1d" userLabel="Layout 1">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <connections>
-                                            <action selector="pushFirstLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gel-K4-aDX"/>
+                                            <action selector="pushLayoutButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXc-9b-ZHM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47J-0l-6pb" userLabel="Layout 2">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47J-0l-6pb" userLabel="Layout 2">
                                         <rect key="frame" x="111" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <connections>
-                                            <action selector="pushSecondLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rqJ-bb-Xh1"/>
+                                            <action selector="pushLayoutButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeQ-Lc-XMU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DN-Bt-Uxa" userLabel="Layout 3">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DN-Bt-Uxa" userLabel="Layout 3">
                                         <rect key="frame" x="222" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <connections>
-                                            <action selector="pushThirdLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwm-c5-tr9"/>
+                                            <action selector="pushLayoutButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMW-IJ-11U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -325,7 +325,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Up" width="13.333333015441895" height="9.6666669845581055"/>
+        <image name="Arrow Up" width="13.5" height="9.5"/>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>

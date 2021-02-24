@@ -64,7 +64,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     // MARK: - Photo Module
     // --Loading PhotoLibrary--\\
-    func loadPhotos(sender: UIButton) {
+    func loadPhotos() {
         // buttonBuffer = sender
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
@@ -83,31 +83,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     // MARK: - Push Photolibrary's Buttons
-    @IBAction func pushTopLeftButton(_ sender: UIButton) {
-        buttonBuffer = gridButtons[0]
-        loadPhotos(sender: gridButtons[0])
-    }
-    @IBAction func pushTopRightButton(_ sender: UIButton) {
-        buttonBuffer = gridButtons[1]
-        loadPhotos(sender: gridButtons[1])
-    }
-    @IBAction func pushBottomLeftButton(_ sender: UIButton) {
-        buttonBuffer = gridButtons[2]
-        loadPhotos(sender: gridButtons[2])
-    }
-    @IBAction func pushBottomRightButton(_ sender: UIButton) {
-        buttonBuffer = gridButtons[3]
-        loadPhotos(sender: gridButtons[2])
+    @IBAction func pushPhotoButtons(_ sender: UIButton) {
+        loadPhotos()
+        let tag = sender.tag
+        if tag == 1 {
+            buttonBuffer = gridButtons[0]
+        } else if tag == 2 {
+            buttonBuffer = gridButtons[1]
+        } else if tag == 3 {
+            buttonBuffer = gridButtons[2]
+        } else if tag == 4 {
+            buttonBuffer = gridButtons[3]
+        }
     }
     // MARK: - Push Layout's Buttons
-    @IBAction func pushFirstLayout(_ sender: UIButton) {
-        defineLayoutButton(.firstFigure)
-    }
-    @IBAction func pushSecondLayout(_ sender: UIButton) {
-        defineLayoutButton(.secondFigure)
-    }
-    @IBAction func pushThirdLayout(_ sender: UIButton) {
-        defineLayoutButton(.thirdFigure)
+    @IBAction func pushLayoutButtons(_ sender: UIButton) {
+        let tag = sender.tag
+        if tag == 5 {
+            defineLayoutButton(.firstFigure)
+        } else if tag == 6 {
+            defineLayoutButton(.secondFigure)
+        } else if tag == 7 {
+            defineLayoutButton(.thirdFigure)
+        }
     }
     // MARK: - Change Elements With Orientation
     @objc func changeDeviceOrientation() {
@@ -143,8 +141,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(activityVC, animated: true)
         activityVC.completionWithItemsHandler = { (_, _, _, _) in
-                    self.reverseGridAnimation()
-                }
+            self.reverseGridAnimation()
+        }
     }
     // MARK: - Animation of the Grid
     private func gridAnimation() {
@@ -175,5 +173,4 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         arrow.isHidden = false
         swipeText.isHidden = false
     }
-
 }
